@@ -1,0 +1,34 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+        $this->call([
+            // AdminSeeder::class,
+            // StaffSeeder::class,
+            // AgentSeeder::class,
+            // UserSeeder::class,
+            // LevelSeeder::class,
+            // ReferralSeeder::class,
+            // GroupSeeder::class,
+            // BankSeeder::class,
+            // PartnerSeeder::class,
+            // AccountantSeeder::class,
+
+            AccountSeeder::class,
+        ]);
+        // DB::table('donations')->delete();
+    }
+}

@@ -1,0 +1,242 @@
+:root {
+    --color1: #4090e3;
+    --color2: #0db14b;
+    --color3: #ffcb0a;
+}
+@media only screen and (min-width: 768px) {
+    .md-w-20 {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+    .sm-w-50 {
+        width: 50%;
+    }
+
+    .sm-w-20 {
+        width: 20%;
+    }
+
+    .shortcut-area img {
+        width: 40px !important;
+    }
+
+    .shortcut-area a {
+        padding: 2px;
+    }
+
+    .shortcut-area span {
+        font-size: 10px;
+    }
+}
+
+#regModal .modal-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#customBtn {
+    background: var(--color2);
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+#copyReferral {
+    background: var(--color2);
+    width: 160px;
+    height: 45px;
+    font-size: 14px;
+}
+
+#copyAccount {
+    background: var(--color2);
+    color: #eee;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#accountCode,
+#copyText {
+    word-break: break-all;
+}
+
+.btn-block {
+    display: block;
+}
+
+#copyReferral:hover,
+#customBtn:hover,
+#copyAccount:hover {
+    color: #fff;
+    background: var(--color2);
+}
+
+#pay-amount-box {
+    padding: 15px;
+    width: 90%;
+    border: 1px solid #ced4da;
+    margin: 10px;
+    color: #777;
+}
+
+@media only screen and (min-width: 768px) {
+    #pay-amount-box {
+        width: 45%;
+    }
+}
+
+#pay-money .active,
+#pay-type .active {
+    background: #eee;
+}
+
+#topupform #box {
+    padding: 10px;
+    /* width: 45%; */
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    margin: 15px 0px;
+    color: #777;
+}
+
+#topupform #trans,
+#idcard-form input[type="file"] {
+    padding: 5px 10px;
+    min-height: auto !important;
+    height: fit-content;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-gold {
+    color: #edb50c;
+}
+
+#digiInvest button:hover {
+    background-color: white;
+}
+
+#investBtn {
+    background: var(--color2);
+    color: #eee;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+/* Language */
+.sl-nav {
+    display: inline;
+}
+.sl-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.sl-nav li {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+.sl-nav li ul {
+    display: none;
+}
+.sl-nav li:hover ul {
+    position: absolute;
+    top: 29px;
+    right: -15px;
+    display: block;
+    background: #fff;
+    width: 120px;
+    padding-top: 0px;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.sl-nav li:hover .triangle {
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    z-index: 10;
+    height: 14px;
+    overflow: hidden;
+    width: 30px;
+    background: transparent;
+}
+.sl-nav li:hover .triangle:after {
+    content: "";
+    display: block;
+    z-index: 20;
+    width: 15px;
+    transform: rotate(45deg) translateY(0px) translatex(10px);
+    height: 15px;
+    background: #fff;
+    border-radius: 2px 0px 0px 0px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.sl-nav li ul li {
+    position: relative;
+    text-align: left;
+    background: transparent;
+    padding: 15px 12px;
+    padding-bottom: 0;
+    z-index: 2;
+    font-size: 14px;
+    color: #3c3c3c;
+}
+.sl-nav li ul li:last-of-type {
+    padding-bottom: 15px;
+}
+.sl-nav li ul li span {
+    padding-left: 5px;
+}
+.sl-nav li ul li span:hover,
+.sl-nav li ul li span.active {
+    color: #0db14b;
+}
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 15px;
+    height: 15px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+}
+.flag-de {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAAPUlEQVQ4T+3HMQ0AIBTE0NOHM8x9B7hgh71bIWGieUvze1m7kHGBr/AVvsJX+EpmP5dV5/gKX+ErfIUvVDYcX2NMxQC8PAAAAABJRU5ErkJggg==");
+    background-size: cover;
+    background-position: center center;
+}
+.flag-usa {
+    background-size: cover;
+    background-position: center center;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABhUlEQVQ4T2Ows82PjGixsc4LD2tysC/09Kjw8622tyuICG8u0w/cpGSCBzF4e1VmZkzw9anOzOj38a4KCW4IC22ECHYk1l9tn4gHMeTlTnZxLikvm+XiUpKW2hvgX+vnV5OVOQEoOGfOtv94AYOzU3Fd7XxHh6Lq6rlurqUx0W0J8Z1AnbW18yotonaYuOJBDBXls4A+bGpaBCTz86YEBtQCvVBSPAPIbY0oP1/aiAcxABU1Ny+2tclvbFjo5FgUF9uenNwNDLnmpkWEnV1TPRcY1O1tS4H6i4umA/0MDK2K8tlAwRqHpP1uoXgQKKraWpcClTY3LQZaCLQ5NaUX5OaWJY3++SeTC/AgBmA4AXUClUJs9ver8fKsAAYEUJCws4G21dXNB1oFdD/Qz8DQTk4C+bm2dn6DZ9bRiDQ8iAEYt8CoBpK5YBIYw0AEEZwSXX4oMB4PYoC6gCzAcDqrjGzEsMfen2xEmbMv1rSTjRi26dqRjShz9o2+6WQjBrSShQSkZAIADvW/HLrLY6cAAAAASUVORK5CYII=");
+}
+
+#idcard-form label {
+    margin-bottom: 5px;
+}
+
+#idcard-form input[type="text"] {
+    min-height: auto !important;
+    height: 40px;
+}
+
+#adsModal .modal-dialog {
+    width: 500px !important;
+}
+
+#adsModal .modal-body {
+    padding: 0.5rem !important;
+}
