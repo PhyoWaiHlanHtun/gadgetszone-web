@@ -65,7 +65,7 @@ class UserAmount extends Model
     public static function add($user)
     {
         UserAmount::create([
-            'capital' => 20,
+            'capital' => 100,
             'user_id' => $user,
             'expire_date' => Carbon::now()->addDays(10),
         ]);

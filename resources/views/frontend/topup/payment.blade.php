@@ -25,12 +25,8 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
 
-<<<<<<< HEAD
 
             <h3 class="my-4 text-center"> {{ __('frontend.pay_type') }} </h3>
-=======
-            <h3 class="my-4 text-center"> Pay Type </h3>
->>>>>>> 6a729d35b13592fc2828824ecb050eed3504ca31
             <div class="col-lg-8" id="pay-type">
                 @include('frontend.partials.alert')
                 <form action="/top-up/payment" method="post" id="topupform" enctype="multipart/form-data">
