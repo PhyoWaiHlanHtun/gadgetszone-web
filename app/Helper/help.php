@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 function storeImage($img, $folder)
 {
     // $fileName= date('YmdHi').$img->getClientOriginalName();
-    $fileName = uniqid('digi').'.'.$img->extension();
+    $fileName = uniqid('gadgets').'.'.$img->extension();
     // $path = $img->storeAs($folder, $fileName, 'public');
     $path = $img->move(public_path('storage/images/'.$folder), $fileName);
 
@@ -81,7 +81,7 @@ function getImageFile($img)
 
 function checkExpireDate($user) // for user
 {
-    if (!$user->amount->expire_status) {
+    if (!$user->amount?->expire_status) {
         if (Carbon::today() > Carbon::parse($user->amount->expire_date)) {
             UserAmount::where('user_id', $user->id)->update([
                 'capital' => $user->amount->capital - 100,
@@ -163,23 +163,23 @@ function getTotalInvestProfitAmount()
 function getInitialAmountType($data)
 {
     switch ($data->type) {
-            case 1:
-                return 'click_commission';
-                break;
-            case 2:
-                return 'level_commission';
-                break;
-            case 3:
-                return 'capital';
-                break;
-            case 4:
-                return 'investment';
-                break;
-            default:
-                return 'click_commission';
-                break;
+        case 1:
+            return 'click_commission';
+            break;
+        case 2:
+            return 'level_commission';
+            break;
+        case 3:
+            return 'capital';
+            break;
+        case 4:
+            return 'investment';
+            break;
+        default:
+            return 'click_commission';
+            break;
             
-        }
+    }
 }
 
 function checkAdvertiseImg()

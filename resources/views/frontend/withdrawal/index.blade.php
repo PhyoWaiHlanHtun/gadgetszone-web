@@ -33,12 +33,8 @@
                     <div class="card">
                         <div class="card-body">
                             <form action="/withdrawal" method="post" id="idcard-form" enctype="multipart/form-data">
-                                @csrf
+                                @csrf                                
 
-                                <input type="number" class="form-control my-3 @error('amount') is-invalid @enderror" name="amount" id="pay-amount" placeholder="{{ __('frontend.withdrawal') }} {{ __('frontend.amount') }}">
-
-                                <select name="bank" id="bank" class="form-control @error('bank') is-invalid @enderror">
-                                    <option value="">--{{ __('frontend.select_payment_type') }}--</option>
                                 <select name="type" id="type" class="form-control my-3 @error('type') is-invalid @enderror" required>
                                     <option value="">--Select Withdrawal Format --</option>
                                     <option value="1">Click Commission ($ {{ Auth::user()->amount->click_commission ?? '0' }}) </option>
@@ -50,16 +46,13 @@
                                 <input type="number" class="form-control my-3 @error('amount') is-invalid @enderror" name="amount" id="pay-amount" value="{{ old('amount') }}" placeholder="Withdrawal Amount ( Minimum - 10 USDT )">
 
                                 <select name="bank" id="bank" class="form-control @error('bank') is-invalid @enderror" required>
-                                    <option value="">--Select Payment Type--</option>
+                                    <option value="">--{{ __('frontend.select_payment_type') }}--</option>
                                     @foreach($banks as $bank)
                                         <option value="{{ $bank->id }}"> {{ $bank->name }} </option>
                                     @endforeach
-                                </select>
+                                </select>                                
 
-                                <input type="text" class="form-control my-3 @error('account') is-invalid @enderror" name="account" id="account" placeholder="{{ __('frontend.account_no') }}">
-
-                                <button type="btn btn-block" id="customBtn">{{ __('frontend.withdrawal') }}</button>
-                                <input type="text" class="form-control my-3 @error('account') is-invalid @enderror" name="account" id="account" value="{{ old('account') }}" placeholder="User Withdrawal Address">
+                                <input type="text" class="form-control my-3 @error('account') is-invalid @enderror" name="account" id="account" value="{{ old('account') }}" placeholder="User Withdrawal Address">                                
 
                                 <hr class="mt-5">
                                 <h4 class="text-center my-4"> User Identity </h4>
@@ -93,8 +86,8 @@
                                     <label for="address"> Withdrawal Address :  </label>
                                     <input type="text" name="address" class="form-control" id="address" value="{{ old('address') }}">
                                 </div>
-                                
-                                <button type="btn btn-block" id="customBtn">Withdrawal</button>
+                                                                
+                                <button type="btn btn-block" id="customBtn">{{ __('frontend.withdrawal') }}</button>
                             </form>
                         </div>
                     </div>
