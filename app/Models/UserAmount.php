@@ -67,7 +67,7 @@ class UserAmount extends Model
         UserAmount::create([
             'capital' => 100,
             'user_id' => $user,
-            'expire_date' => Carbon::now()->addDays(10),
+            'expire_date' => Carbon::now()->addDays(3),
         ]);
     }
 

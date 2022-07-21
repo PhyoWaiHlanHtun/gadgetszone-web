@@ -25,42 +25,93 @@ class AgentController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
+        // return $user;
         
         if ($user->status) {
-            $today_customers = User::where('agent_id', Auth::id())->whereDate('created_at', Carbon::today())->whereStatus(1)->count();
-            $total_customers = User::where('agent_id', Auth::id())->whereStatus(1)->count();
 
-            $today_donations = Donation::whereDate('created_at', Carbon::today())->get()->sum('amount');
-            $total_donations = Donation::all()->sum('amount');
-        
-            $today_topups = Topup::whereDate('created_at', Carbon::today())->whereStatus(1)->get()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('amount');
+            // Customer
+            $today_customers = User::where('agent_id', Auth::id())
+                                    ->whereDate('created_at', Carbon::today())
+                                    ->whereStatus(1)
+                                    ->count();
 
-            $total_topups = Topup::whereStatus(1)->get()->filter(function ($value) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('amount');
+            $total_customers = User::where('agent_id', Auth::id())
+                                    ->whereStatus(1)
+                                    ->count();
 
-            $today_withdrawls = Withdrawl::whereDate('created_at', Carbon::today())->whereStatus(1)->get()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('amount');
-            $total_withdrawls = Withdrawl::whereStatus(1)->get()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('amount');
+            // Donation
 
-            $today_purchases = Purchase::whereDate('created_at', Carbon::today())->get()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->count();
-            $total_purchases = Purchase::all()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->count();
+            $today_donations = Donation::whereDate('donations.created_at', Carbon::today())
+                                            ->leftJoin('users', function ($join) {
+                                                $join->on('donations.user_id', 'users.id');
+                                            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->sum('amount');
 
-            $today_purchase_amount = Purchase::whereDate('created_at', Carbon::today())->get()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('price');
-            $total_purchase_amount = Purchase::all()->filter(function ($value, $key) {
-                return $value->user?->agent_id == Auth::id();
-            })->sum('price');
+            $total_donations = Donation::leftJoin('users', function ($join) {
+                $join->on('donations.user_id', 'users.id');
+            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->sum('amount');
+
+            // Topup
+            $today_topups = Topup::whereDate('topups.created_at', Carbon::today())
+                                            ->leftJoin('users', function ($join) {
+                                                $join->on('topups.user_id', 'users.id');
+                                            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->where('topups.status', 1)
+                                            ->sum('amount');
+
+            $total_topups = Topup::leftJoin('users', function ($join) {
+                $join->on('topups.user_id', 'users.id');
+            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->where('topups.status', 1)
+                                            ->sum('amount');
+            
+            // Withdrawals
+            $today_withdrawls = Withdrawl::whereDate('withdrawls.created_at', Carbon::today())
+                                            ->leftJoin('users', function ($join) {
+                                                $join->on('withdrawls.user_id', 'users.id');
+                                            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->where('withdrawls.status', 1)
+                                            ->sum('amount');
+
+            $total_withdrawls = Withdrawl::leftJoin('users', function ($join) {
+                $join->on('withdrawls.user_id', 'users.id');
+            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->where('withdrawls.status', 1)
+                                            ->sum('amount');
+            
+            // Purchases
+            $today_purchases = Purchase::whereDate('purchases.created_at', Carbon::today())
+                                        ->leftJoin('users', function ($join) {
+                                            $join->on('purchases.user_id', 'users.id');
+                                        })
+                                        ->where('users.agent_id', Auth::id())
+                                        ->count();
+
+            $total_purchases = Purchase::leftJoin('users', function ($join) {
+                $join->on('purchases.user_id', 'users.id');
+            })
+                            ->where('users.agent_id', Auth::id())
+                            ->count();
+
+            $today_purchase_amount = Purchase::whereDate('purchases.created_at', Carbon::today())
+                                            ->leftJoin('users', function ($join) {
+                                                $join->on('purchases.user_id', 'users.id');
+                                            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->sum('price');
+
+            $total_purchase_amount = Purchase::leftJoin('users', function ($join) {
+                $join->on('purchases.user_id', 'users.id');
+            })
+                                            ->where('users.agent_id', Auth::id())
+                                            ->sum('price');
         
             return view(
                 "backend.agent.dashboard",
