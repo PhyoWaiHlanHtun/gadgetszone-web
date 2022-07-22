@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Bank;
 use App\Models\User;
 use App\Models\Group;
 use App\Models\Level;
@@ -26,8 +27,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        // DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         // User::truncate();
         // UserAmount::truncate();
         // UserIdentity::truncate();
@@ -40,7 +40,9 @@ class DatabaseSeeder extends Seeder
         // Referral::truncate();
         // Level::truncate();
         // Purchase::truncate();
-        // DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        Bank::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         $this->call([
             // AdminSeeder::class,
             // StaffSeeder::class,
@@ -49,7 +51,7 @@ class DatabaseSeeder extends Seeder
             // LevelSeeder::class,
             // ReferralSeeder::class,
             // GroupSeeder::class,
-            // BankSeeder::class,
+            BankSeeder::class,
             // PartnerSeeder::class,
             // AccountantSeeder::class,
 

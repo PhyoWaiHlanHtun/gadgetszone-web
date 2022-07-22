@@ -16,24 +16,51 @@ class BankSeeder extends Seeder
     public function run()
     {
         $bank = new Bank();
-        $bank->name = "Pay1";
+        $bank->name = "Topup Account (TRC)";
         $bank->image = "";
-        $bank->account = Str::random(20);
+        $bank->account = '12345678900';
         $bank->phone = "";
+        $bank->type = 1;
         $bank->save();
 
         $bank = new Bank();
-        $bank->name = "Pay2";
+        $bank->name = "Topup Acount (ERC)";
         $bank->image = "";
-        $bank->account = Str::random(20);
+        $bank->account = '12345678901';
         $bank->phone = "";
+        $bank->type = 1;
         $bank->save();
 
         $bank = new Bank();
-        $bank->name = "Pay3";
+        $bank->name = "Investment Account (TRC)";
         $bank->image = "";
-        $bank->account = Str::random(20);
+        $bank->account = '12345678900';
         $bank->phone = "";
+        $bank->type = 2;
+        $bank->save();
+
+        $bank = new Bank();
+        $bank->name = "Investment Acount (ERC)";
+        $bank->image = "";
+        $bank->account = '12345678901';
+        $bank->phone = "";
+        $bank->type = 2;
+        $bank->save();
+
+        $bank = new Bank();
+        $bank->name = "Donation Account (TRC)";
+        $bank->image = "";
+        $bank->account = '12345678900';
+        $bank->phone = "";
+        $bank->type = 3;
+        $bank->save();
+
+        $bank = new Bank();
+        $bank->name = "Donation Acount (ERC)";
+        $bank->image = "";
+        $bank->account = '12345678901';
+        $bank->phone = "";
+        $bank->type = 3;
         $bank->save();
     }
 }
