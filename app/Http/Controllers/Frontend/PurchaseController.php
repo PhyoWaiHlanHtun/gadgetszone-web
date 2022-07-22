@@ -65,7 +65,7 @@ class PurchaseController extends Controller
             return back()->with('warning', 'You have exceeded your limit!');
         }
 
-        $commission = $product->price * 0.08 ;
+        $commission = $product->price * 0.05 ;
 
         $purchase = new Purchase();
         $purchase->product_id = $id;

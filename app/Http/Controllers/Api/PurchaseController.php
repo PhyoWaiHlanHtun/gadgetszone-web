@@ -84,7 +84,7 @@ class PurchaseController extends Controller
             ]);
         }
 
-        $commission = $product->price * 0.08 ;
+        $commission = $product->price * 0.05 ;
 
         $purchase = new Purchase();
         $purchase->product_id = $id;
