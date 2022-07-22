@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        // DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         // User::truncate();
         // UserAmount::truncate();
         // UserIdentity::truncate();
@@ -40,23 +40,22 @@ class DatabaseSeeder extends Seeder
         // Referral::truncate();
         // Level::truncate();
         // Purchase::truncate();
-        Bank::truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        // Bank::truncate();
+        // DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $this->call([
+            AccountSeeder::class,
             // AdminSeeder::class,
             // StaffSeeder::class,
             // AgentSeeder::class,
+            // AccountantSeeder::class,
             // UserSeeder::class,
-            // LevelSeeder::class,
+            LevelSeeder::class,
             // ReferralSeeder::class,
             // GroupSeeder::class,
             BankSeeder::class,
-            // PartnerSeeder::class,
-            // AccountantSeeder::class,
+            PartnerSeeder::class,
 
-            // AccountSeeder::class,
         ]);
-        // DB::table('donations')->delete();
     }
 }
