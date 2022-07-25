@@ -18,31 +18,15 @@ class BankSeeder extends Seeder
         $bank = new Bank();
         $bank->name = "Topup Account (TRC)";
         $bank->image = "";
-        $bank->account = '12345678900';
+        $bank->account = '1GwwrW8KaNp7gqg9x827YAfpGp3vQrN3Ga';
         $bank->phone = "";
         $bank->type = 1;
         $bank->save();
 
         $bank = new Bank();
-        $bank->name = "Topup Acount (ERC)";
+        $bank->name = "Investment Acount (TRC)";
         $bank->image = "";
-        $bank->account = '12345678901';
-        $bank->phone = "";
-        $bank->type = 1;
-        $bank->save();
-
-        $bank = new Bank();
-        $bank->name = "Investment Account (TRC)";
-        $bank->image = "";
-        $bank->account = '12345678900';
-        $bank->phone = "";
-        $bank->type = 2;
-        $bank->save();
-
-        $bank = new Bank();
-        $bank->name = "Investment Acount (ERC)";
-        $bank->image = "";
-        $bank->account = '12345678901';
+        $bank->account = '1EFpmnoXezwmwY8buPhgiSQkxQKmR5G9Ur';
         $bank->phone = "";
         $bank->type = 2;
         $bank->save();
@@ -50,15 +34,7 @@ class BankSeeder extends Seeder
         $bank = new Bank();
         $bank->name = "Donation Account (TRC)";
         $bank->image = "";
-        $bank->account = '12345678900';
-        $bank->phone = "";
-        $bank->type = 3;
-        $bank->save();
-
-        $bank = new Bank();
-        $bank->name = "Donation Acount (ERC)";
-        $bank->image = "";
-        $bank->account = '12345678901';
+        $bank->account = '16BZMZoist5xmdtRxNaVkwufdvRDJYA9Qp';
         $bank->phone = "";
         $bank->type = 3;
         $bank->save();
