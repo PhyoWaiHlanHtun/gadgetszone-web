@@ -16,7 +16,7 @@ class BankSeeder extends Seeder
     public function run()
     {
         $bank = new Bank();
-        $bank->name = "Topup Account";
+        $bank->name = "Topup Account (TRC)";
         $bank->image = "";
         $bank->account = '1GwwrW8KaNp7gqg9x827YAfpGp3vQrN3Ga';
         $bank->phone = "";
@@ -24,7 +24,7 @@ class BankSeeder extends Seeder
         $bank->save();
 
         $bank = new Bank();
-        $bank->name = "Investment Acount";
+        $bank->name = "Investment Acount (TRC)";
         $bank->image = "";
         $bank->account = '1EFpmnoXezwmwY8buPhgiSQkxQKmR5G9Ur';
         $bank->phone = "";
@@ -32,7 +32,7 @@ class BankSeeder extends Seeder
         $bank->save();
 
         $bank = new Bank();
-        $bank->name = "Donation Account";
+        $bank->name = "Donation Account (TRC)";
         $bank->image = "";
         $bank->account = '16BZMZoist5xmdtRxNaVkwufdvRDJYA9Qp';
         $bank->phone = "";
