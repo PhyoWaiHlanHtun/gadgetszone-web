@@ -22,7 +22,7 @@ return [
     'select_status' => 'Select your Status',
     'show_data' => 'Show Data',
     'hide_data' => 'Hide Data',
-    
+
     'serial' => 'Serial',
     'select_img' => 'Select Image',
 

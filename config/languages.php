@@ -5,5 +5,6 @@ return [
     'ch' => 'China',
     'sp' => 'Spain',
     'jp' => 'Japan',
-    'hi' => 'India ( Hindi )'
+    'hi' => 'India ( Hindi )',
+    'ko' => 'Korean'
 ];

@@ -82,5 +82,5 @@ return [
     'spec_prods' => 'Special Products',
     'feature' => 'Featured Offers',
     'partners' => 'Partners With Us',
-    
+
 ];
