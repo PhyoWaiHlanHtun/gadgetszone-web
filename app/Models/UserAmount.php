@@ -42,7 +42,7 @@ class UserAmount extends Model
             $level = $leader->referral->level;
             
             if ($i == 1) {
-                $commission_rate = 0.16;
+                $commission_rate = 0.12;
             } elseif ($i == 2) {
                 $commission_rate = 0.08;
             } elseif ($i == 3) {
