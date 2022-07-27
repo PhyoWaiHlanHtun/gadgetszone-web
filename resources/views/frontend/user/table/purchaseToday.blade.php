@@ -1,10 +1,10 @@
 <table>
     <thead>
         <tr>
-            <th>No</th>
-            <th>Product Name</th>
-            <th>Category</th>
-            <th>Price</th>            
+            <th>{{ __('frontend.no') }}</th>
+            <th>{{ __('frontend.product_name') }}</th>
+            <th>{{ __('frontend.category') }}</th>
+            <th>{{ __('frontend.price') }}</th>            
         </tr>
     </thead>
     <tbody>
@@ -17,7 +17,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="5"> No Data Found. </td>
+            <td colspan="5"> {{ __('frontend.no_data')}}. </td>
         </tr>
         @endforelse
     </tbody>

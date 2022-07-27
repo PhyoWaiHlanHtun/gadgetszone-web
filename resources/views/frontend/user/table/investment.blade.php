@@ -1,26 +1,26 @@
 <div class="d-flex justify-content-between mb-3">
     <div>
-        <p> Total Investment Amount : $ {{ getTotalInvestAmount() }} </p>
+        <p> {{ __('frontend.total_inv_amount')}} : $ {{ getTotalInvestAmount() }} </p>
     </div>
     <div>
-        <p> Total Profit Amount : $ {{ getTotalInvestProfitAmount() }} </p>
+        <p> {{ __('frontend.total_profit_amount')}} : $ {{ getTotalInvestProfitAmount() }} </p>
     </div>
 </div>
 
 <table>
     <thead>
         <tr>
-            <th>No</th>
-            <th>Date</th>
-            <th>Invest Plan</th>
-            <th>Payment Type</th>
-            <th>Amount</th>
-            <th>Period</th>
-            <th>Rate</th>
-            <th>Profit</th>
-            <th>Status</th>
-            <th>Action</th>
-            <th>Profit Date</th>
+            <th>{{ __('frontend.no') }}</th>
+            <th>{{ __('frontend.date') }}</th>
+            <th>{{ __('frontend.inv_plan') }}</th>
+            <th>{{ __('frontend.payment_type') }}</th>
+            <th>{{ __('frontend.amount') }}</th>
+            <th>{{ __('frontend.period') }}</th>
+            <th>{{ __('frontend.rate') }}</th>
+            <th>{{ __('frontend.profit') }}</th>
+            <th>{{ __('frontend.status') }}</th>
+            <th>{{ __('frontend.action') }}</th>
+            <th>{{ __('frontend.profit_date') }}</th>
         </tr>
     </thead>
     <tbody> 
@@ -46,7 +46,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="11"> No Data Found. </td>
+            <td colspan="11"> {{ __('frontend.no_data') }} </td>
         </tr>
         @endforelse
     </tbody>

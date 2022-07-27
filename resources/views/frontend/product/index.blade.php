@@ -135,7 +135,9 @@
                     </div>
                     <!-- Tab Content Area End -->
                     <!--  Pagination Area Start -->
-                    {{ $products->links('frontend.partials.pagination') }}
+                    <div class="my-5">
+                        {{ $products->links() }}
+                    </div>
                     <!--  Pagination Area End -->
                 </div>
                 <!-- Shop Bottom Area End -->
