@@ -49,12 +49,12 @@
                             <span class="{{ $lang == 'hi' ? 'active' : '' }}">हिन्दी</span>
                         </a>
                     </li>
-                    {{-- <li>
+                    <li>
                         <a href="{{ route('lang.switch', 'ko') }}">
                             <img src="{{ asset('backend/images/flags/korean.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'ko' ? 'active' : '' }}">한국인</span>
                         </a>
-                    </li> --}}
+                    </li>
                 </ul>
             </li>
         </ul>

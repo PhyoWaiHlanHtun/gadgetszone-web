@@ -1,10 +1,10 @@
 <table>
     <thead>
         <tr>
-            <th>No</th>
-            <th>Date</th>            
-            <th>Payment Type</th>
-            <th>Amount</th>
+            <th>{{ __('frontend.no') }}</th>
+            <th>{{ __('frontend.date') }}</th>            
+            <th>{{ __('frontend.payment_type') }}</th>
+            <th>{{ __('frontend.amount') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -17,7 +17,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="6"> No Data Found. </td>
+            <td colspan="6"> {{ __('frontend.no_data') }} </td>
         </tr>
         @endforelse
     </tbody>
