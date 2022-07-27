@@ -21,40 +21,40 @@
                 <ul>
                     <li>
                         <a href="{{ route('lang.switch', 'en') }}">
-                            <img src="{{ asset('backend/images/flags/us.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/us.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'en' ? 'active' : '' }}">English</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lang.switch', 'ch') }}">
-                            <img src="{{ asset('backend/images/flags/china.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/china.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'ch' ? 'active' : '' }}">中国人</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lang.switch', 'jp') }}">
-                            <img src="{{ asset('backend/images/flags/jp.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/jp.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'jp' ? 'active' : '' }}">日本</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lang.switch', 'sp') }}">
-                            <img src="{{ asset('backend/images/flags/spain.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/spain.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'sp' ? 'active' : '' }}">España</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lang.switch', 'hi') }}">
-                            <img src="{{ asset('backend/images/flags/in.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/in.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'hi' ? 'active' : '' }}">हिन्दी</span>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('lang.switch', 'ko') }}">
-                            <img src="{{ asset('backend/images/flags/korean.svg') }}" alt="flag" class="me-2 rounded" height="18">
+                            <img src="{{ asset('backend/images/flags/korean.svg') }}" alt="flag" class="me-2 rounded sl-flag" height="18">
                             <span class="{{ $lang == 'ko' ? 'active' : '' }}">한국인</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
         </ul>

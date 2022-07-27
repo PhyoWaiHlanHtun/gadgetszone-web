@@ -18,7 +18,7 @@
                                         aria-hidden="true"></i></a>
                                 </li>
                                 <li>
-                                    <a title="Telegram" rel="noopener noreferrer" href="#" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i>
+                                    <a title="Telegram" rel="noopener noreferrer" href="https://t.me/ETL173518" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>

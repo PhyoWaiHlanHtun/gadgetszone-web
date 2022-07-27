@@ -33,30 +33,8 @@
 
                     <div id="box">
                         {{ __('frontend.amount') }} : {{ number_format($amount) }}
-                    </div>
+                    </div>                                    
 
-                    <div id="box">
-                        {{ __('frontend.payment_name') }} : {{ $bank->name }}
-                    </div>
-
-                    @if( $bank->account )
-                    <div id="box" class="d-md-flex justify-content-between">
-                        <p> {{ __('frontend.account_no') }}  :  <span id="accountCode" style=" display:block; overflow-wrap:anywhere;"> {{ $bank->account }} </span> </p>
-                        <button id="copyAccount"> {{ __('frontend.copy') }}  </button>
-                    </div>
-                    @endif
-
-                    <div id="box" class="d-flex">
-                        <p style="width:50%"> {{ __('frontend.screenshot') }}  :  </p>
-                        <input type="file" name="image" class="form-control" id="trans" accept="image/*" required>
-                    </div>
-
-                    {{-- <input type="text" class="form-control my-3" name="trans_id" id="trans_id" placeholder="Transaction id" > --}}
-
-                    <input type="hidden" name="amount" value="{{ $amount }}">
-                    <input type="hidden" name="bank" value="{{ $bank->id }}">
-
-                    <button class="btn btn-block mt-4" id="customBtn" type="submit"> {{ __('frontend.donate') }}  </button>
                     @if( $bank == 'custom')
 
                         <div id="box">
@@ -66,18 +44,18 @@
                     @else
 
                         <div id="box">
-                            Payment Name : {{ $bank->name }}
+                            {{ __('frontend.payment_name') }} : {{ $bank->name }}
                         </div>
 
                         @if( $bank->account )
                         <div id="box" class="d-md-flex justify-content-between">
-                            <p> Account No :  <span id="accountCode"> {{ $bank->account }} </span> </p>
-                            <button id="copyAccount"> Copy </button>
+                            <p> {{ __('frontend.account_no') }} :  <span id="accountCode"> {{ $bank->account }} </span> </p>
+                            <button id="copyAccount"> {{ __('frontend.copy') }} </button>
                         </div>
                         @endif
 
                         <div id="box" class="d-md-flex">
-                            <p style="width:50%"> Transaction Screenshot :  </p>
+                            <p style="width:50%"> {{ __('frontend.screenshot') }} :  </p>
                             <input type="file" name="image" class="form-control" id="trans" accept="image/*" required>
                         </div>
 
@@ -90,7 +68,7 @@
 
                     <input type="hidden" name="amount" value="{{ $amount }}">
                     
-                    <button class="btn btn-block mt-4" id="customBtn" type="submit"> Donate </button>
+                    <button class="btn btn-block mt-4" id="customBtn" type="submit"> {{ __('frontend.donate') }} </button>
 
                 </form>
             </div>
