@@ -34,11 +34,11 @@ class PageController extends Controller
         }
         Cookie::queue('category', $category, 1500);
 
-        $new = Products::where('category_id', $category)->whereHas('type', function ($query) {
+        $new = Products::with(['category','type','brand'])->where('category_id', $category)->whereHas('type', function ($query) {
             $query->where('name', 'LIKE', 'new');
         })->paginate(10);
 
-        $special = Products::where('category_id', $category)->whereHas('type', function ($query) {
+        $special = Products::with(['category','type','brand'])->where('category_id', $category)->whereHas('type', function ($query) {
             $query->where('name', 'LIKE', 'special');
         })->paginate(10);
 
@@ -90,7 +90,7 @@ class PageController extends Controller
             $new = Products::where('category_id', $category)->whereHas('type', function ($query) {
                 $query->where('name', 'LIKE', 'new');
             })->paginate(10);
-            
+
             return view('frontend.new-products', compact('new'))->render();
         }
     }
@@ -103,7 +103,7 @@ class PageController extends Controller
             $special = Products::where('category_id', $category)->whereHas('type', function ($query) {
                 $query->where('name', 'LIKE', 'special');
             })->paginate(10);
-            
+
             return view('frontend.special-products', compact('special'))->render();
         }
     }

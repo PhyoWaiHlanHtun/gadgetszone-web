@@ -47,3 +47,9 @@ Route::post('/agent-fix/{id}', [App\Http\Controllers\UserFixController::class, '
 
 Route::get('/withdrawal/amount/error', 'PaymentAmountFixController@withdrawal_error');
 Route::get('/withdrawal/amount/fix', 'PaymentAmountFixController@withdrawal_fix');
+
+Route::get('/testing', function(){
+    return view('frontend-new.layouts.master');
+});
+
+
