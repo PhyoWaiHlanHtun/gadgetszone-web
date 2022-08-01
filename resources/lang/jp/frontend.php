@@ -82,4 +82,7 @@ return [
     'spec_prods' => '特産品',
     'feature' => '注目のオファー',
     'partners' => '私たちとのパートナー',
+
+    'invite_share' => '招待して共有する',
+    'income' => '所得',
 ];

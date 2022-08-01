@@ -16,20 +16,28 @@
 
                             @if( $url = checkAuth() )
                             <li><a href="{{ $url }}"><i class="fa fa-user"></i> {{ __('frontend.account') }}</a></li>
-                            <li><a href="#"
-                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
-                                        class="fa fa-sign-out"></i> {{ __('frontend.logout') }}</a></li>
+                            <li>
+                                <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-sign-out"></i> {{ __('frontend.logout') }}
+                                </a>
+                            </li>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                             @else
-                            <li><a href="{{ route('agent.login') }}"><i class="fa fa-sign-in"></i> 
-                                {{ __('frontend.agent_login') }}</a></li>
-                            <li><a href="{{ route('user.login') }}"><i class="fa fa-sign-in"></i> 
-                                {{ __('frontend.user_login') }}</a></li>
-                            <li><a href="{{ route('user.register') }}"><i class="fa fa-user"></i> 
-                                {{ __('frontend.sign_up') }} </a></li>
+                            <li>
+                                <a href="{{ route('agent.login') }}"><i class="fa fa-sign-in"></i>
+                                {{ __('frontend.agent_login') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.login') }}"><i class="fa fa-sign-in"></i>
+                                {{ __('frontend.user_login') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.register') }}"><i class="fa fa-user"></i>
+                                {{ __('frontend.sign_up') }} </a>
+                            </li>
                             @endif
                         </ul>
                     </div>
@@ -52,9 +60,8 @@
                         {{-- Language --}}
                         @include('frontend.layouts.language')
 
-                        
                         <div class="col-lg-7 col">
-                            <div class="header-actions">                        
+                            <div class="header-actions">
                                 <a href="https://drive.google.com/file/d/18LCADjZFH0GvkesSnyNwgR1ZtMfUaB61/view?usp=sharing"><img src="{{ asset('assets/images/qrcode.png') }}" class="img img-thumbnail" style="width: 75px;height:auto;" alt="Site Logo" /><p>Android</p></a>
                                 <a href="#" >
                                     <img src="{{ asset('assets/images/ios-qrcode.jpg') }}" class="img img-thumbnail" style="width: 75px;height:auto;" alt="IOS Download" />
@@ -94,7 +101,7 @@
                     <div class="header-actions">
 
                         {{-- Language --}}
-                        @include('frontend.layouts.language')                        
+                        @include('frontend.layouts.language')
 
                         <a href="#offcanvas-cart"
                             class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">

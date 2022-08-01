@@ -1,35 +1,43 @@
 <!-- Global Vendor, plugins JS -->
 <!-- JS Files
 ============================================ -->
-<script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/modernizr-3.11.2.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/jquery.countdown.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/scrollUp.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/venobox.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/jquery-ui.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/mailchimp-ajax.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
-<script src="{{ asset('assets/js/app.js') }}"></script>
-
+<script src="{{ asset('frontend/js/jquery.js') }}"></script>
+<script src="{{ asset('frontend/js/bootstrap.js') }}"></script>
+<script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('frontend/js/slick.js') }}"></script>
+<script src="{{ asset('frontend/js/countdown.js') }}"></script>
+<script src="{{ asset('frontend/js/main.js') }}"></script>
+<script src="{{ asset('frontend/js/app.js') }}"></script>
 @yield('script')
 
 <script>
-    $(document).ready(function () {
-        if( $("#advertise").val() == false && $("#auth").val() == 'false'){
-            $("#regModal").modal("show");
+$('#products .owl-carousel').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin:10,
+    items: 5,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:false,
+            loop:false
         }
+    }
+  });
 
-        if( $("#advertise").val() == true ){
-            $("#adsModal").modal("show");
-        }
-
-        $('#adsModal').on('hidden.bs.modal', function () {
-            if( $("#auth").val() == 'false'){
-                $("#regModal").modal("show");
-            }
-        })
-    });
+  $('#commission .owl-carousel').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin:10,
+    items: 2,
+  });
 </script>

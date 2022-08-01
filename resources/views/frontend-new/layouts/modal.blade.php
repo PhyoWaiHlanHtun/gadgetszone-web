@@ -161,7 +161,7 @@
             <div class="modal-body" id="login-close">
                 <button type="button" class="btn-close" id="login11" data-bs-dismiss="modal" aria-label="Close"> <i class="pe-7s-close"></i></button>
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 ml-auto mr-auto">                                                       
+                    <div class="col-lg-12 col-md-12 ml-auto mr-auto">
                         <img src="{{ asset(getImage(getAdvertiseImg())) }}" alt="Advertise Image" width="100%">
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <i class="pe-7s-close-circle"></i> Error !
                 </div>
                 <div class="tt-modal-product my-3 px-5">
-                    <h2 class="tt-title mt-5"><a href="#"> Please, Login to your user account first !</a></h2>
+                    <h4 class="tt-title mt-5"><a href="#"> Please, Login to your user account first !</a></h4>
                     <a href="{{ route('user.login') }}" class="btn mt-3 mx-auto" style="width:50%" id="customBtn"> Login Here </a>
                 </div>
             </div>

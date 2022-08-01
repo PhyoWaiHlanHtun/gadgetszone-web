@@ -83,4 +83,6 @@ return [
     'feature' => 'Featured Offers',
     'partners' => 'Partners With Us',
 
+    'invite_share' => 'Invite & Share',
+    'income' => 'Income',
 ];

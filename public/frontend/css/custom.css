@@ -1,0 +1,33 @@
+@media screen and (min-width: 769px) {
+    .releases .product-item{
+        width : 18%;
+        display: inline-block;
+        margin : 0.8%
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .releases .product-item{
+        width : 48%;
+        display: inline-block;
+        margin : 0.8%
+    }
+} */
+
+.w-50{
+    width : 50%;
+}
+
+/* #commission img{
+    width : 100%;
+} */
+
+.element-leaguage ul img{
+    margin-right : 10px;
+}
+
+.white{
+    color: white;
+}
+
+

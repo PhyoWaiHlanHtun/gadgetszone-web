@@ -82,4 +82,7 @@ return [
     'spec_prods' => 'productos especiales',
     'feature' => 'Ofertas destacadas',
     'partners' => 'Socios con nosotros',
+
+    'invite_share' => 'Invitar y compartir',
+    'income' => 'ingreso',
 ];

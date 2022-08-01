@@ -1,119 +1,72 @@
-<div class="footer-area">
-    <div class="footer-container">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <!-- Start single blog -->
-                    <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
-                        <div class="single-wedge">
-                            <div class="footer-logo">
-                                <a href="/"><img src="{{ asset('assets/images/logo/logo3.png') }}" alt="logo" width="150"></a>
-                            </div>
-                            <p class="about-text">
-                                Gadgets Zone  {{ __('frontend.footer_text') }}
-                            </p>
-                            <ul class="link-follow">
-                                <li>
-                                    <a class="m-0" title="Facebook" rel="noopener noreferrer" href="#" target="_blank"><i class="fa fa-facebook"
-                                        aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a title="Telegram" rel="noopener noreferrer" href="#" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="WhatsApp" rel="noopener noreferrer" href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Instagram" rel="noopener noreferrer" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
+<footer>
+    <div class="f-top v2">
+        <div class="container container-240">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="footer-block footer-about">
+                        <div class="f-logo">
+                            <a href="#"><img src="{{ asset('frontend/img/logo/ecome-logo.png') }}" alt="" class="img-reponsive"></a>
                         </div>
-                    </div>
-                    <!-- End single blog -->
-
-                    <!-- Start single blog -->
-                    <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-40px">
-                        <div class="single-wedge">
-                            <h4 class="footer-herading">{{ __('frontend.my_account') }}</h4>
-                            <div class="footer-links">
-                                <div class="footer-row">
-                                    <ul class="align-items-center">
-                                        <li class="li"><a class="single-link" href="#">
-                                            {{ __('frontend.my_account') }}
-                                        </a></li>
-                                        <li class="li"><a class="single-link" href="#">
-                                            {{ __('frontend.my_order') }}
-                                        </a></li>
-                                        <li class="li"><a class="single-link" href="#">
-                                            {{ __('frontend.pur_history') }}
-                                        </a></li>
-                                        <li class="li"><a class="single-link" href="#">
-                                            {{ __('frontend.privacy') }}
-                                        </a></li>
-                                        <li class="li"><a class="single-link" href="#">
-                                            {{ __('frontend.help_center') }}
-                                        </a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <p class="about-text">
+                            Gadgets Zone  {{ __('frontend.footer_text') }}
+                        </p>
+                        <div class="footer-social social">
+                            <h3 class="footer-block-title">Follow us</h3>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-paper-plane"></a>
+                            <a href="#" class="fa fa-whatsapp"></a>
+                            <a href="#" class="fa fa-instagram"></a>
                         </div>
-                    </div>
-                    <!-- End single blog -->
-
-                    <!-- Start single blog -->
-                    <div class="col-md-6 col-lg-3 col-sm-12">
-                        <div class="single-wedge">
-                            <h4 class="footer-herading">{{ __('frontend.contact_info') }}</h4>
-                            <div class="footer-links">
-                                <!-- News letter area -->
-                                <p class="address">
-                                    {{-- Address: 23, New Drum Street, London , <br> United Kingdom, E17AY --}}
-                                    {{ __('frontend.address') }}
-                                </p>
-                                <p class="mail">{{ __('frontend.email') }}:<a href="mailto:info@gadgetszone.net"> info@gadgetszone.net</a></p>
-
-                                <!-- News letter area  End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-12 d-flex">                                 
-                        <!-- Start single blog -->
-                        <div class="single-wedge" style="width: 45%;margin-right:10px">
-                            <a href="https://drive.google.com/file/d/18LCADjZFH0GvkesSnyNwgR1ZtMfUaB61/view?usp=sharing"><img src="{{ asset('assets/images/qrcode.png') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" /><p class=" text-center">Android</p></a>
-                        </div>                            
-                        <div class="single-wedge" style="width: 45%">
-                            <a href="#">
-                                <img src="{{ asset('assets/images/ios-qrcode.jpg') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" />
-                                <p class=" text-center">IOS</p>
-                            </a>
-                        </div>
-                        <!-- End single blog -->
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="line-shape-top line-height-1">
-                    <div class="row flex-md-row-reverse align-items-center">
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="payment-mth"><a href="javascript:void(0)"><img class="img img-fluid" src="{{ asset('assets/images/icons/payment.png') }}" alt="payment-image"></a></div>
-                        </div>
-                        <div class="col-md-6 text-center text-md-start">
-                            <p class="copy-text">
-                                &copy; <?= date('Y') ?>
-                                {{-- <i class="fa fa-heart" aria-hidden="true"></i>  --}}
-                                 <a class="company-name" href="#">
-                                <strong> Gadgets Zone </strong></a>.
-                                {{ __('frontend.reversed')}}
-                            </p>
-                        </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <div class="footer-block">
+                        <h3 class="footer-block-title">{{ __('frontend.my_account') }}</h3>
+                        <ul class="footer-block-content">
+                            <li><a href="#">{{ __('frontend.my_account') }}</a></li>
+                            <li><a href="#"> {{ __('frontend.my_order') }}</a></li>
+                            <li><a href="#">{{ __('frontend.pur_history') }}</a></li>
+                            <li><a href="#">{{ __('frontend.privacy') }}</a></li>
+                            <li><a href="#">{{ __('frontend.help_center') }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="footer-block">
+                        <h3 class="footer-block-title">{{ __('frontend.contact_info') }}</h3>
+                        <ul class="footer-block-content">
+                            <li>{{ __('frontend.address') }}</li>
+                            <li>{{ __('frontend.email') }}:<a href="mailto:info@ecomezone.net"> info@ecomezone.net</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="single-wedge" style="width: 45%;margin-right:10px">
+                        <a href="https://drive.google.com/file/d/18LCADjZFH0GvkesSnyNwgR1ZtMfUaB61/view?usp=sharing"><img src="{{ asset('assets/images/qrcode.png') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" /><p class=" text-center">Android</p></a>
+                    </div>
+                    <div class="single-wedge" style="width: 45%">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/ios-qrcode.jpg') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" />
+                            <p class=" text-center">IOS</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="f-bottom">
+        <div class="container container-240">
+            <div class="row flex lr">
+                <div class="col-xs-6 f-copyright"><span>© <?= date('Y') ?> E-Come Zone .{{ __('frontend.reversed')}}</span></div>
+                <div class="col-xs-6 f-payment hidden-xs">
+                    <a href="#"><img src="{{ asset('frontend/img/payment/mastercard.png') }}" alt="" class="img-reponsive"></a>
+                    <a href="#"><img src="{{ asset('frontend/img/payment/paypal.png') }}" alt="" class="img-reponsive"></a>
+                    <a href="#"><img src="{{ asset('frontend/img/payment/visa.png') }}" alt="" class="img-reponsive"></a>
+                    <a href="#"><img src="{{ asset('frontend/img/payment/american-express.png') }}" alt="" class="img-reponsive"></a>
+                    <a href="#"><img src="{{ asset('frontend/img/payment/western-union.png') }}" alt="" class="img-reponsive"></a>
+                    <a href="#"><img src="{{ asset('frontend/img/payment/jcb.png') }}" alt="" class="img-reponsive"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

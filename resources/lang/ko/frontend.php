@@ -82,4 +82,7 @@ return [
     'spec_prods' => '특수 제품',
     'feature' => '주요 제안',
     'partners' => '우리와 함께하는 파트너',
+
+    'invite_share' => '초대하고 공유',
+    'income' => '소득',
 ];

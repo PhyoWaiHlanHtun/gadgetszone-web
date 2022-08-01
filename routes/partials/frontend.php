@@ -2,6 +2,7 @@
 
 
 Route::get('/', 'Frontend\PageController@index')->name('frontend.index');
+Route::get('/new', 'front\PageController@index')->name('frontend-new.index');
 Route::get('/investment', 'Frontend\PageController@diginvest')->name('frontend.diginvest');
 
 Route::get('/about-us', 'Frontend\PageController@about')->name('frontend.about');

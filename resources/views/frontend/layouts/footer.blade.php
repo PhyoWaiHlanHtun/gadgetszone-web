@@ -79,11 +79,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-sm-12 d-flex">                                 
+                    <div class="col-md-6 col-lg-3 col-sm-12 d-flex">
                         <!-- Start single blog -->
                         <div class="single-wedge" style="width: 45%;margin-right:10px">
                             <a href="https://drive.google.com/file/d/18LCADjZFH0GvkesSnyNwgR1ZtMfUaB61/view?usp=sharing"><img src="{{ asset('assets/images/qrcode.png') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" /><p class=" text-center">Android</p></a>
-                        </div>                            
+                        </div>
                         <div class="single-wedge" style="width: 45%">
                             <a href="#">
                                 <img src="{{ asset('assets/images/ios-qrcode.jpg') }}" class="img img-thumbnail img-responsive"  alt="Site Logo" />
